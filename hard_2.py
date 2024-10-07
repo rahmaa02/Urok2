@@ -1,4 +1,4 @@
-from hard import factory, newGame
+from hard import Factory, newGame
 
 
 class Game:
@@ -31,19 +31,19 @@ class Factory:
         self.color=color
         self.tip_game=tip_game
 
-    def закупка_сырья(self):
+    def zakupka(self):
         print('Закупка сырья для игрушки')
 
-    def пошив(self):
+    def poshiv(self):
         print('Пошив игрушки')
 
-    def окрас(self):
+    def okras(self):
         print(f'Окрас игрушки в {self.color} цвет')
 
-    def собрать_игрушку(self):
-        self.закупка_сырья()
-        self.пошив()
-        self.окрас()
+    def sborka(self):
+        self.zakupka()
+        self.poshiv()
+        self.okras()
 
         if self.tip_game== 'Animal':
             return Animal(self.name, self.color)
@@ -55,11 +55,11 @@ class Factory:
 print('############################')
 
 factory1 = Factory('Dog', 'серый', 'Animal')
-game1= factory1.собрать_игрушку()
+game1= factory1.sborka()
 print(game1)
 
 print('############################')
 
 factory2 = Factory('Cat', 'Green', 'Film')
-game2= factory2.собрать_игрушку()
+game2= factory2.sborka()
 print(game2)
