@@ -13,22 +13,22 @@ class Factory:
         self.color=color
         self.tip_game=tip_game
 
-    def zakupka(self):
+    def purchase(self):
         print('Закупка сырья для игрушки')
 
-    def poshiv(self):
+    def sewing(self):
         print('Пошив игрушки')
 
-    def okras(self):
+    def colouration(self):
         print(f'Окрас игрушки в {self.color} цвет')
 
-    def sborka(self):
-        self.zakupka()
-        self.poshiv()
-        self.okras()
+    def assembling(self):
+        self.purchase()
+        self.sewing()
+        self.colouration()
         newGame=Game(self.name, self.color, self.tip_game)
         return newGame
 
 farcotyGame=Factory('Волк', 'серый', 'животное')
-newGame=farcotyGame.sborka()
+newGame=farcotyGame.assembling()
 print(newGame)

@@ -31,19 +31,19 @@ class Factory:
         self.color=color
         self.tip_game=tip_game
 
-    def zakupka(self):
+    def purchase(self):
         print('Закупка сырья для игрушки')
 
-    def poshiv(self):
+    def sewing(self):
         print('Пошив игрушки')
 
-    def okras(self):
+    def colouration(self):
         print(f'Окрас игрушки в {self.color} цвет')
 
-    def sborka(self):
-        self.zakupka()
-        self.poshiv()
-        self.okras()
+    def assembling(self):
+        self.purchase()
+        self.sewing()
+        self.colouration()
 
         if self.tip_game== 'Animal':
             return Animal(self.name, self.color)
@@ -55,11 +55,11 @@ class Factory:
 print('############################')
 
 factory1 = Factory('Dog', 'серый', 'Animal')
-game1= factory1.sborka()
+game1= factory1.assembling()
 print(game1)
 
 print('############################')
 
 factory2 = Factory('Cat', 'Green', 'Film')
-game2= factory2.sborka()
+game2= factory2.assembling()
 print(game2)
